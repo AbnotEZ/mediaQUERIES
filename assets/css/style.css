@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.Grid-Container {
+    display: grid;
+    grid-template-areas: 
+    'nav'
+    'header'
+    'main'
+    'section'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 8fr 1fr 1fr ;
+    height: 100vh;
+    /*medida pantalla completa*/
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header { /* selected  */
+    grid-area: header;
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+#cars{
+    width: 70vw;
+    height: 30px;
+    margin-bottom: 15px;
+}
+strong{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.second-title{
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer {
+    grid-area: footer;
+    background: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 1em;
+}
+section .card-pag {
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+section .card-pag a {
+    color: rgb(0, 0, 0);
+    padding: 7px;
+    border: 1px solid rgb(157, 157, 172);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Nav */
+nav {
+    grid-area: nav;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.img-nav img {
+    width: 30%;
+    padding-top: 1em;
+}
+
+.title {
+    text-align: center;
+}
+
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 2em;
+    margin: 0;
+    font-size: 20px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul{
+    display: none;
+    list-style: none;
+} 
+
+nav .mobile {
+align-items: center;
+} 
+
+li  a{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    
+} 
+
+
+#myMenu li a:hover {
+    background-color: rgb(199, 197, 197);
+}
+
+
+/* card */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-area: main;
+    background: rgb(255, 255, 255);
+    height: 70vh;
+}
+
+.card-img{
+    height: 40%;
+} 
+
+.card-img img{
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: arial;
+    justify-content: center;
+    align-content: center;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+}
+
+#card2, #card3, #card4, #card5, #card6, #card7, #card8 {
+    display: none;
+}
+
+button {
+    border: none;
+    outline: 0;
+    padding: 15px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+.icon{
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 576px)  { 
+    .Grid-Container {
+    display: grid;
+    grid-template-areas: 
+        'nav header'
+        'nav main'
+        'footer main'
+        'footer section';
+    grid-template-columns: 20% auto;
+    grid-template-rows:  1fr 10fr 1fr 1fr;
+    height: 100vh;
+    /*medida pantalla completa*/
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header { /* selected  */
+    grid-area: header;
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 0.5em;
+    
+}
+
+strong{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.second-title{
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer {
+    grid-area: footer;
+    background: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+section .card-pag {
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+section .card-pag a {
+    color: rgb(0, 0, 0);
+    padding: 7px;
+    border: 1px solid rgb(157, 157, 172);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Nav */
+nav ul{
+    display: flex;
+    flex-direction: column;
+} 
+.ico {
+    display: none;
+    } 
+nav {
+    grid-area: nav;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.img-nav img {
+    width: 30%;
+    padding-top: 1em;
+}
+
+.title {
+    text-align: center;
+}
+
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 2em;
+    margin: 0;
+    font-size: 20px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    text-decoration: none;
+    color: black;
+}
+
+li  a{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    
+} 
+
+
+#myMenu li a:hover {
+    background-color: rgb(199, 197, 197);
+}
+
+
+/* card */
+#card2, #card3, #card4, #card5, #card6, #card7, #card8 {
+    display: flex;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-area: main;
+    background: rgb(255, 255, 255);
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-right: 4em;
+    height: 70vh;
+    margin-left: 4em;
+    gap: 10px;
+    overflow-y: scroll
+}
+.card div img{
+    width: 100%; 
+} 
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: arial;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    outline: 0;
+    padding: 15px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+footer div a i{
+    text-decoration: none;
+}
+}
